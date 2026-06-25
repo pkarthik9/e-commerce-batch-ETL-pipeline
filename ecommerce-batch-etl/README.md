@@ -8,12 +8,12 @@ orchestrated end-to-end with Apache Airflow.
 
 ```
  ┌────────────────────┐    ┌──────────────────────┐    ┌───────────────────────┐
- │  Raw CSV extract    │ -> │  PySpark transforms   │ -> │  Warehouse (SQLite     │
- │  (customers,         │    │  - clean & dedupe      │    │  locally / Snowflake   │
- │   products, orders,  │    │  - build fact_orders   │    │  in prod) + Parquet    │
- │   order_items)       │    │  - daily_revenue_mart  │    │  data lake             │
- └────────────────────┘    │  - top_products_mart  │    └───────────────────────┘
-                              └──────────────────────┘
+ │  Raw CSV extract   │ -> │  PySpark transforms  │ -> │  Warehouse (SQLite    │
+ │  (customers,       │    │  - clean & dedupe    │    │  locally / Snowflake  │
+ │   products, orders,│    │  - build fact_orders │    │  in prod) + Parquet   │
+ │   order_items)     │    │  - daily_revenue_mart│    │  data lake            │
+ └────────────────────┘    │  - top_products_mart │    └───────────────────────┘
+                           └──────────────────────┘
                        Orchestrated daily by an Airflow DAG
 ```
 
