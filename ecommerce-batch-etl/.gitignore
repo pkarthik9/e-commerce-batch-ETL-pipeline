@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+data/raw/*.csv
+data/processed/*.parquet
+*.db
+.DS_Store
+logs/
+airflow.cfg
+airflow.db
